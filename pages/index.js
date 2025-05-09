@@ -11,8 +11,8 @@ export default function Home() {
     const fetchWeatherData = async () => {
       try {
         setIsLoading(true);
-        // The API URL with the Visual Crossing API Key
-        const apiUrl = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/denmark/today?unitGroup=us&key=2J54LYG6Z5E737LLZPANNC3BQ&contentType=json';
+        // The API URL with the Visual Crossing API Key (using metric units)
+        const apiUrl = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/denmark/today?unitGroup=metric&key=2J54LYG6Z5E737LLZPANNC3BQ&contentType=json';
         
         const response = await axios.get(apiUrl);
         setWeatherData(response.data);
@@ -45,11 +45,11 @@ export default function Home() {
               <div className={styles.conditionsGrid}>
                 <div className={styles.conditionItem}>
                   <p className={styles.label}>Temperature</p>
-                  <p className={styles.value}>{weatherData.currentConditions.temp}°F</p>
+                  <p className={styles.value}>{weatherData.currentConditions.temp}°C</p>
                 </div>
                 <div className={styles.conditionItem}>
                   <p className={styles.label}>Feels Like</p>
-                  <p className={styles.value}>{weatherData.currentConditions.feelslike}°F</p>
+                  <p className={styles.value}>{weatherData.currentConditions.feelslike}°C</p>
                 </div>
                 <div className={styles.conditionItem}>
                   <p className={styles.label}>Conditions</p>
@@ -61,11 +61,11 @@ export default function Home() {
                 </div>
                 <div className={styles.conditionItem}>
                   <p className={styles.label}>Wind</p>
-                  <p className={styles.value}>{weatherData.currentConditions.windspeed} mph</p>
+                  <p className={styles.value}>{weatherData.currentConditions.windspeed} km/h</p>
                 </div>
                 <div className={styles.conditionItem}>
                   <p className={styles.label}>Visibility</p>
-                  <p className={styles.value}>{weatherData.currentConditions.visibility} miles</p>
+                  <p className={styles.value}>{weatherData.currentConditions.visibility} km</p>
                 </div>
                 <div className={styles.conditionItem}>
                   <p className={styles.label}>Sunrise</p>
@@ -85,15 +85,15 @@ export default function Home() {
               <div className={styles.dayInfo}>
                 <div className={styles.conditionItem}>
                   <p className={styles.label}>High</p>
-                  <p className={styles.value}>{weatherData.days[0].tempmax}°F</p>
+                  <p className={styles.value}>{weatherData.days[0].tempmax}°C</p>
                 </div>
                 <div className={styles.conditionItem}>
                   <p className={styles.label}>Low</p>
-                  <p className={styles.value}>{weatherData.days[0].tempmin}°F</p>
+                  <p className={styles.value}>{weatherData.days[0].tempmin}°C</p>
                 </div>
                 <div className={styles.conditionItem}>
                   <p className={styles.label}>Precipitation</p>
-                  <p className={styles.value}>{weatherData.days[0].precip} in</p>
+                  <p className={styles.value}>{weatherData.days[0].precip} mm</p>
                 </div>
                 <div className={styles.conditionItem}>
                   <p className={styles.label}>UV Index</p>
@@ -110,7 +110,7 @@ export default function Home() {
                   .map((hour, index) => (
                     <div key={index} className={styles.hourCard}>
                       <p className={styles.hourTime}>{hour.datetime.slice(0, 5)}</p>
-                      <p className={styles.hourTemp}>{hour.temp}°F</p>
+                      <p className={styles.hourTemp}>{hour.temp}°C</p>
                       <p className={styles.hourConditions}>{hour.conditions}</p>
                     </div>
                   ))}

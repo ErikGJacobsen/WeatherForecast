@@ -64,8 +64,10 @@ npm start
 
 This application uses the Visual Crossing Weather API with the following endpoint:
 ```
-https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/denmark/today?unitGroup=us&key=2J54LYG6Z5E737LLZPANNC3BQ&contentType=json
+https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/denmark/today?unitGroup=metric&key=2J54LYG6Z5E737LLZPANNC3BQ&contentType=json
 ```
+
+The application displays all weather data in metric units (°C, km/h, mm, etc.)
 
 ## License
 
