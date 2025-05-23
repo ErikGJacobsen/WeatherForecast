@@ -38,6 +38,24 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.conditionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.conditionsHeader h2 {
+  margin: 0;
+}
+
+.currentTime {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
 .conditionsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

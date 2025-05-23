@@ -41,7 +41,10 @@ export default function Home() {
         {weatherData && (
           <div className={styles.weatherInfo}>
             <div className={styles.currentConditions}>
-              <h2>Current Conditions</h2>
+              <div className={styles.conditionsHeader}>
+                <h2>Current Conditions</h2>
+                <p className={styles.currentTime}>as of {weatherData.currentConditions.datetime}</p>
+              </div>
               <div className={styles.conditionsGrid}>
                 <div className={styles.conditionItem}>
                   <p className={styles.label}>Temperature</p>
