@@ -16,6 +16,13 @@
   margin: 0 auto;
 }
 
+.appLayout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
 .title {
   margin: 0;
   line-height: 1.15;
@@ -130,6 +137,44 @@
   color: #666;
 }
 
+.claudeSection {
+  width: 100%;
+  max-width: 1000px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.claudeSection h2 {
+  color: #5c49d3;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.instructionsBox {
+  background-color: #ffffff;
+  border-left: 4px solid #5c49d3;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.instructionsBox p {
+  margin: 0.7rem 0;
+  line-height: 1.5;
+}
+
+.claudeInfo {
+  font-style: italic;
+  color: #666;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -145,6 +190,15 @@
 .footer p {
   margin: 0.25rem 0;
   color: #666;
+}
+
+.footer a {
+  color: #5c49d3;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {

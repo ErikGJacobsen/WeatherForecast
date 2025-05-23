@@ -37,6 +37,8 @@ export default function Home() {
         <h1 className={styles.title}>
           Weather Forecast for {weatherData?.resolvedAddress || 'Denmark'}
         </h1>
+        
+        <div className={styles.appLayout}>
 
         {weatherData && (
           <div className={styles.weatherInfo}>
@@ -122,9 +124,24 @@ export default function Home() {
           </div>
         )}
 
+        </div>
+
+        <div className={styles.claudeSection}>
+          <h2>Built with Claude AI</h2>
+          <p>This entire application was built with just a few simple instructions to Claude:</p>
+          <div className={styles.instructionsBox}>
+            <p><strong>Initial request:</strong> "I want to create a test web application - that should only show data from a weather forecast api."</p>
+            <p><strong>API details:</strong> "The app will use the Visual Crossing Weather API endpoint for Denmark."</p>
+            <p><strong>Unit change:</strong> "Change the units from US to metric."</p>
+            <p><strong>Additional feature:</strong> "Add a time field for displaying the time besides current conditions headline."</p>
+          </div>
+          <p className={styles.claudeInfo}>Claude automatically created all necessary files, implemented the API integration, and styled the entire application without requiring any manual coding.</p>
+        </div>
+
         <footer className={styles.footer}>
           <p>Powered by Visual Crossing Weather API</p>
           <p>Created for OpenShift sandbox environment</p>
+          <p>Built with <a href="https://claude.ai" target="_blank" rel="noopener noreferrer">Claude AI</a> by Anthropic</p>
         </footer>
       </main>
     </div>
